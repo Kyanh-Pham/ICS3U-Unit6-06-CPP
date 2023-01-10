@@ -4,11 +4,6 @@
 // Created on: Jan 2023
 // This program converts string to hexidecimal
 
-// Copyright (c) 2021 Michael Zagon All rights reserved
-
-// Created by: Michael Zagon
-// Created on: October 2021
-// This program converts unicode to hexidecimal
 
 #include <iostream>
 #include <list>
