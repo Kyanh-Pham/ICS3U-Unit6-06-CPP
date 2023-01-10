@@ -118,8 +118,7 @@ std::list<std::string> stringToHexidecimal(std::string userInput) {
     for (char& unicodes : userInput) {
         if (dictionary.count(unicodes) > 0) {
             hexadecimal.push_back(dictionary[unicodes]);
-        }
-        else {
+        } else {
             hexadecimal.push_front("-1");
             break;
         }
@@ -140,12 +139,16 @@ int main() {
     converted = stringToHexidecimal(userInput);
 
     std::cout << "" << std::endl;
-    std::cout << userInput << " in hex is: ";
 
-    for (std::string single_element : converted) {
-        std::cout << "'" << single_element << "'" << ", ";
+    if (converted.front() == "-1") {
+        std::cout << "Invalid Input" << std::endl;
+    } else {
+        std::cout << userInput << " in hex is: ";
+        for (std::string single_hex : converted) {
+            std::cout << "'" << single_hex << "'"
+                      << ", ";
+        }
     }
 
-    std::cout << "" << std::endl;
     std::cout << "\nDone." << std::endl;
 }
